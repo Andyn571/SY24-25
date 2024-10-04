@@ -1249,7 +1249,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(740, 112);
+            this.pictureBox3.Location = new System.Drawing.Point(400, 112);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1260,7 +1260,7 @@
             // MineBox
             // 
             this.MineBox.Image = global::Minesweeper.Properties.Resources.png_transparent_red_circle_minesweeper_minesweeper_deluxe_minesweeper_adfree_video_games_land_mine_naval_mine_android_thumbnail;
-            this.MineBox.Location = new System.Drawing.Point(740, 62);
+            this.MineBox.Location = new System.Drawing.Point(400, 62);
             this.MineBox.Name = "MineBox";
             this.MineBox.Size = new System.Drawing.Size(50, 50);
             this.MineBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1271,7 +1271,7 @@
             // FlagBox
             // 
             this.FlagBox.Image = global::Minesweeper.Properties.Resources.images;
-            this.FlagBox.Location = new System.Drawing.Point(740, 12);
+            this.FlagBox.Location = new System.Drawing.Point(400, 12);
             this.FlagBox.Name = "FlagBox";
             this.FlagBox.Size = new System.Drawing.Size(50, 50);
             this.FlagBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1283,7 +1283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(468, 450);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.MineBox);
