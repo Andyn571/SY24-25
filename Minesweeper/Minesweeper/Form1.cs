@@ -162,6 +162,10 @@ namespace Minesweeper
             {
                 tileGrid[getIndex(GetButton(r + 1, c + 1))].SetDug();
             }
+            if (r < 10 && c < 10)
+            {
+                tileGrid[getIndex(GetButton(r, c ))].SetDug();
+            }
         }
         private void button91_MouseDown(object sender, MouseEventArgs e)
         {
@@ -171,6 +175,9 @@ namespace Minesweeper
                 t.setFlag();
             if (e.Button == MouseButtons.Left)
                 t.SetDug();
+            if (e.Button==MouseButtons.Left && t.GetMine())
+                this.Close();
+               
             
            if (e.Button == MouseButtons.Middle) 
            { 
@@ -187,26 +194,34 @@ namespace Minesweeper
         private void ResetButton_Click(object sender, EventArgs e)
         {
             Reset();
+           
         }
-        void Reset()
+        private void Reset()
         {
-            for (int i = 0; i < 100; i++)
+            Reset(); 
+            void Reset()
             {
-                btnGrid[i] = (Button)Controls["button" + (i + 1)];
-                tileGrid[i] = new Tile(btnGrid[i]);
-                tileGrid[i].setflagIMG(FlagBox.Image);
-                tileGrid[i].setMineIMG(MineBox.Image);
-            }
-            CreateMines(10);
-            //countAdj(5, 5);
-            for (int r =1; r <11; r++)
-            {
-                for (int c=1; c<11; c++) 
+                for (int i = 0; i < 100; i++)
                 {
-                    tileGrid[getIndex(GetButton(r, c))].setNearBy(countAdj(r, c));
+                    btnGrid[i] = (Button)Controls["button" + (i + 1)];
+                    tileGrid[i] = new Tile(btnGrid[i]);
+                    tileGrid[i].setflagIMG(FlagBox.Image);
+                    tileGrid[i].setMineIMG(MineBox.Image);
+                    
+                    
+                }
+                CreateMines(10);
+                //countAdj(5, 5);
+                for (int r = 1; r < 11; r++)
+                {
+                    for (int c = 1; c < 11; c++)
+                    {
+                        tileGrid[getIndex(GetButton(r, c))].setNearBy(countAdj(r, c));
+                    }
                 }
             }
         }
+       
         private void CreateMines(int numMines)
         {
             int MineCount = 0;

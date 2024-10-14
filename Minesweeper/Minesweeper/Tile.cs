@@ -25,7 +25,8 @@ namespace Minesweeper
         public void setNearBy(int n) 
         {  
             m_nearby = n; 
-            m_b.Text=m_nearby.ToString();
+           
+
         }
         public void setflagIMG(Image flagIMG) { m_flagIMG = flagIMG; }
         public void setMineIMG(Image mineIMG) { m_mineIMG = mineIMG; }
@@ -33,17 +34,18 @@ namespace Minesweeper
         public void setMine(Boolean b) 
         {
             m_mine = b;
-            m_b.BackgroundImage=m_mineIMG;
         }
         public Boolean GetMine() { return m_mine; }
         public Boolean GetFlag() { return m_flag; }
         public void SetDug()
         {
+            m_b.Text = m_nearby.ToString();
             m_dug = true;
             if (m_mine && !m_flag)
                 m_b.BackgroundImage = m_mineIMG;
             else 
                 m_b.BackColor=Color.BlanchedAlmond;
+           
         }
         public void setFlag()
         {

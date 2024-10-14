@@ -132,6 +132,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MineBox = new System.Windows.Forms.PictureBox();
             this.FlagBox = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MineBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlagBox)).BeginInit();
@@ -1279,11 +1280,20 @@
             this.FlagBox.TabStop = false;
             this.FlagBox.Visible = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 394);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(230, 22);
+            this.textBox1.TabIndex = 114;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.MineBox);
@@ -1394,6 +1404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MineBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlagBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1502,6 +1513,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.PictureBox MineBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
