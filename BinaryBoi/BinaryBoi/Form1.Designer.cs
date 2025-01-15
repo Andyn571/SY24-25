@@ -55,12 +55,13 @@
             this.Bitt5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bit5
             // 
             this.Bit5.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit5.Location = new System.Drawing.Point(219, 12);
+            this.Bit5.Location = new System.Drawing.Point(390, 12);
             this.Bit5.MaxLength = 1;
             this.Bit5.Multiline = true;
             this.Bit5.Name = "Bit5";
@@ -75,7 +76,7 @@
             // Bit4
             // 
             this.Bit4.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit4.Location = new System.Drawing.Point(288, 12);
+            this.Bit4.Location = new System.Drawing.Point(459, 12);
             this.Bit4.MaxLength = 1;
             this.Bit4.Multiline = true;
             this.Bit4.Name = "Bit4";
@@ -90,7 +91,7 @@
             // Bit3
             // 
             this.Bit3.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit3.Location = new System.Drawing.Point(357, 12);
+            this.Bit3.Location = new System.Drawing.Point(528, 12);
             this.Bit3.MaxLength = 1;
             this.Bit3.Multiline = true;
             this.Bit3.Name = "Bit3";
@@ -105,7 +106,7 @@
             // Bit2
             // 
             this.Bit2.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit2.Location = new System.Drawing.Point(426, 12);
+            this.Bit2.Location = new System.Drawing.Point(597, 12);
             this.Bit2.MaxLength = 1;
             this.Bit2.Multiline = true;
             this.Bit2.Name = "Bit2";
@@ -120,7 +121,7 @@
             // Bit1
             // 
             this.Bit1.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit1.Location = new System.Drawing.Point(495, 12);
+            this.Bit1.Location = new System.Drawing.Point(666, 12);
             this.Bit1.MaxLength = 1;
             this.Bit1.Multiline = true;
             this.Bit1.Name = "Bit1";
@@ -135,7 +136,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(564, 12);
+            this.label1.Location = new System.Drawing.Point(735, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 5;
@@ -144,7 +145,7 @@
             // Bit8
             // 
             this.Bit8.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit8.Location = new System.Drawing.Point(12, 12);
+            this.Bit8.Location = new System.Drawing.Point(183, 12);
             this.Bit8.MaxLength = 1;
             this.Bit8.Multiline = true;
             this.Bit8.Name = "Bit8";
@@ -159,7 +160,7 @@
             // Bit7
             // 
             this.Bit7.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit7.Location = new System.Drawing.Point(81, 12);
+            this.Bit7.Location = new System.Drawing.Point(252, 12);
             this.Bit7.MaxLength = 1;
             this.Bit7.Multiline = true;
             this.Bit7.Name = "Bit7";
@@ -174,7 +175,7 @@
             // Bit6
             // 
             this.Bit6.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bit6.Location = new System.Drawing.Point(150, 12);
+            this.Bit6.Location = new System.Drawing.Point(321, 12);
             this.Bit6.MaxLength = 1;
             this.Bit6.Multiline = true;
             this.Bit6.Name = "Bit6";
@@ -189,7 +190,7 @@
             // bBit6
             // 
             this.bBit6.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit6.Location = new System.Drawing.Point(150, 82);
+            this.bBit6.Location = new System.Drawing.Point(321, 82);
             this.bBit6.MaxLength = 1;
             this.bBit6.Multiline = true;
             this.bBit6.Name = "bBit6";
@@ -204,7 +205,7 @@
             // bBit7
             // 
             this.bBit7.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit7.Location = new System.Drawing.Point(81, 82);
+            this.bBit7.Location = new System.Drawing.Point(252, 82);
             this.bBit7.MaxLength = 1;
             this.bBit7.Multiline = true;
             this.bBit7.Name = "bBit7";
@@ -219,7 +220,7 @@
             // bBit8
             // 
             this.bBit8.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit8.Location = new System.Drawing.Point(12, 82);
+            this.bBit8.Location = new System.Drawing.Point(183, 82);
             this.bBit8.MaxLength = 1;
             this.bBit8.Multiline = true;
             this.bBit8.Name = "bBit8";
@@ -234,7 +235,7 @@
             // bBit1
             // 
             this.bBit1.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit1.Location = new System.Drawing.Point(495, 82);
+            this.bBit1.Location = new System.Drawing.Point(666, 82);
             this.bBit1.MaxLength = 1;
             this.bBit1.Multiline = true;
             this.bBit1.Name = "bBit1";
@@ -249,7 +250,7 @@
             // bBit2
             // 
             this.bBit2.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit2.Location = new System.Drawing.Point(426, 82);
+            this.bBit2.Location = new System.Drawing.Point(597, 82);
             this.bBit2.MaxLength = 1;
             this.bBit2.Multiline = true;
             this.bBit2.Name = "bBit2";
@@ -264,7 +265,7 @@
             // bBit3
             // 
             this.bBit3.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit3.Location = new System.Drawing.Point(357, 82);
+            this.bBit3.Location = new System.Drawing.Point(528, 82);
             this.bBit3.MaxLength = 1;
             this.bBit3.Multiline = true;
             this.bBit3.Name = "bBit3";
@@ -279,7 +280,7 @@
             // bBit4
             // 
             this.bBit4.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit4.Location = new System.Drawing.Point(288, 82);
+            this.bBit4.Location = new System.Drawing.Point(459, 82);
             this.bBit4.MaxLength = 1;
             this.bBit4.Multiline = true;
             this.bBit4.Name = "bBit4";
@@ -294,7 +295,7 @@
             // bBit5
             // 
             this.bBit5.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBit5.Location = new System.Drawing.Point(219, 82);
+            this.bBit5.Location = new System.Drawing.Point(390, 82);
             this.bBit5.MaxLength = 1;
             this.bBit5.Multiline = true;
             this.bBit5.Name = "bBit5";
@@ -309,7 +310,7 @@
             // Bitt6
             // 
             this.Bitt6.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt6.Location = new System.Drawing.Point(150, 152);
+            this.Bitt6.Location = new System.Drawing.Point(321, 152);
             this.Bitt6.MaxLength = 1;
             this.Bitt6.Multiline = true;
             this.Bitt6.Name = "Bitt6";
@@ -322,7 +323,7 @@
             // Bitt7
             // 
             this.Bitt7.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt7.Location = new System.Drawing.Point(81, 152);
+            this.Bitt7.Location = new System.Drawing.Point(252, 152);
             this.Bitt7.MaxLength = 1;
             this.Bitt7.Multiline = true;
             this.Bitt7.Name = "Bitt7";
@@ -335,7 +336,7 @@
             // Bitt8
             // 
             this.Bitt8.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt8.Location = new System.Drawing.Point(12, 152);
+            this.Bitt8.Location = new System.Drawing.Point(183, 152);
             this.Bitt8.MaxLength = 1;
             this.Bitt8.Multiline = true;
             this.Bitt8.Name = "Bitt8";
@@ -348,7 +349,7 @@
             // Bitt1
             // 
             this.Bitt1.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt1.Location = new System.Drawing.Point(495, 152);
+            this.Bitt1.Location = new System.Drawing.Point(666, 152);
             this.Bitt1.MaxLength = 1;
             this.Bitt1.Multiline = true;
             this.Bitt1.Name = "Bitt1";
@@ -361,7 +362,7 @@
             // Bitt2
             // 
             this.Bitt2.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt2.Location = new System.Drawing.Point(426, 152);
+            this.Bitt2.Location = new System.Drawing.Point(597, 152);
             this.Bitt2.MaxLength = 1;
             this.Bitt2.Multiline = true;
             this.Bitt2.Name = "Bitt2";
@@ -374,7 +375,7 @@
             // Bitt3
             // 
             this.Bitt3.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt3.Location = new System.Drawing.Point(357, 152);
+            this.Bitt3.Location = new System.Drawing.Point(528, 152);
             this.Bitt3.MaxLength = 1;
             this.Bitt3.Multiline = true;
             this.Bitt3.Name = "Bitt3";
@@ -387,7 +388,7 @@
             // Bitt4
             // 
             this.Bitt4.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt4.Location = new System.Drawing.Point(288, 152);
+            this.Bitt4.Location = new System.Drawing.Point(459, 152);
             this.Bitt4.MaxLength = 1;
             this.Bitt4.Multiline = true;
             this.Bitt4.Name = "Bitt4";
@@ -401,7 +402,7 @@
             // 
             this.Bitt5.AcceptsReturn = true;
             this.Bitt5.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bitt5.Location = new System.Drawing.Point(219, 152);
+            this.Bitt5.Location = new System.Drawing.Point(390, 152);
             this.Bitt5.MaxLength = 1;
             this.Bitt5.Multiline = true;
             this.Bitt5.Name = "Bitt5";
@@ -414,7 +415,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 82);
+            this.label2.Location = new System.Drawing.Point(735, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 25;
@@ -423,17 +424,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(564, 152);
+            this.label3.Location = new System.Drawing.Point(735, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "label3";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(102, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Bitt6);
@@ -497,6 +509,7 @@
         private System.Windows.Forms.TextBox Bitt5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

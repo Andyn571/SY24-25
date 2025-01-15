@@ -113,5 +113,39 @@ namespace BinaryBoi
             if (((TextBox) sender).Text == "0") ((TextBox) sender).Text = "1";
             else ((TextBox)sender).Text = "0";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bits[i] = 0;
+                Update();
+            }
+            for (int i = 0; i < Bbits.Length; i++)
+            {
+                Bbits[i] = 0;
+                Update();
+            }
+        }
+        private void Update()
+        {
+            Bit1.Text = (bits[0]==1 ? "1" : "0");
+            Bit2.Text = (bits[1] == 1 ? "1" : "0");
+            Bit3.Text = (bits[2] == 1 ? "1" : "0");
+            Bit4.Text = (bits[3] == 1 ? "1" : "0");
+            Bit5.Text = (bits[4] == 1 ? "1" : "0");
+            Bit6.Text = (bits[5] == 1 ? "1" : "0");
+            Bit7.Text = (bits[6] == 1 ? "1" : "0");
+            Bit8.Text = (bits[7] == 1 ? "1" : "0");
+
+            bBit1.Text = (Bbits[0] == 1 ? "1" : "0");
+            bBit2.Text = (Bbits[1] == 1 ? "1" : "0");
+            bBit3.Text = (Bbits[2] == 1 ? "1" : "0");
+            bBit4.Text = (Bbits[3] == 1 ? "1" : "0");
+            bBit5.Text = (Bbits[4] == 1 ? "1" : "0");
+            bBit6.Text = (Bbits[5] == 1 ? "1" : "0");
+            bBit7.Text = (Bbits[6] == 1 ? "1" : "0");
+            bBit8.Text = (Bbits[7] == 1 ? "1" : "0");
+        }
     }
 }
