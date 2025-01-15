@@ -107,5 +107,11 @@ namespace BinaryBoi
             //bit8
             calculateValue2();
         }
+
+        private void Bit8_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (((TextBox) sender).Text == "0") ((TextBox) sender).Text = "1";
+            else ((TextBox)sender).Text = "0";
+        }
     }
 }
