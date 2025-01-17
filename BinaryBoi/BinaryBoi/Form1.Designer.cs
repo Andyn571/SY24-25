@@ -55,7 +55,11 @@
             this.Bitt5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ClearA = new System.Windows.Forms.Button();
+            this.ClearB = new System.Windows.Forms.Button();
+            this.ClearC = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bit5
@@ -70,7 +74,6 @@
             this.Bit5.TabIndex = 0;
             this.Bit5.Text = "0";
             this.Bit5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit5.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit4
@@ -85,7 +88,6 @@
             this.Bit4.TabIndex = 1;
             this.Bit4.Text = "0";
             this.Bit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit4.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit3
@@ -100,7 +102,6 @@
             this.Bit3.TabIndex = 2;
             this.Bit3.Text = "0";
             this.Bit3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit3.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit2
@@ -115,7 +116,6 @@
             this.Bit2.TabIndex = 3;
             this.Bit2.Text = "0";
             this.Bit2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit2.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit1
@@ -130,7 +130,6 @@
             this.Bit1.TabIndex = 4;
             this.Bit1.Text = "0";
             this.Bit1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit1.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // label1
@@ -154,7 +153,6 @@
             this.Bit8.TabIndex = 6;
             this.Bit8.Text = "0";
             this.Bit8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit8.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit7
@@ -169,7 +167,6 @@
             this.Bit7.TabIndex = 7;
             this.Bit7.Text = "0";
             this.Bit7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit7.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bit6
@@ -184,7 +181,6 @@
             this.Bit6.TabIndex = 8;
             this.Bit6.Text = "0";
             this.Bit6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Bit6.TextChanged += new System.EventHandler(this.Bit1_TextChanged);
             this.Bit6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit6
@@ -199,7 +195,6 @@
             this.bBit6.TabIndex = 16;
             this.bBit6.Text = "0";
             this.bBit6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit6.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit7
@@ -214,7 +209,6 @@
             this.bBit7.TabIndex = 15;
             this.bBit7.Text = "0";
             this.bBit7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit7.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit8
@@ -229,7 +223,6 @@
             this.bBit8.TabIndex = 14;
             this.bBit8.Text = "0";
             this.bBit8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit8.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit1
@@ -244,7 +237,6 @@
             this.bBit1.TabIndex = 13;
             this.bBit1.Text = "0";
             this.bBit1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit1.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit2
@@ -259,7 +251,6 @@
             this.bBit2.TabIndex = 12;
             this.bBit2.Text = "0";
             this.bBit2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit2.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit3
@@ -274,7 +265,6 @@
             this.bBit3.TabIndex = 11;
             this.bBit3.Text = "0";
             this.bBit3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit3.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit4
@@ -289,7 +279,6 @@
             this.bBit4.TabIndex = 10;
             this.bBit4.Text = "0";
             this.bBit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit4.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // bBit5
@@ -304,7 +293,6 @@
             this.bBit5.TabIndex = 9;
             this.bBit5.Text = "0";
             this.bBit5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bBit5.TextChanged += new System.EventHandler(this.bBit1_TextChanged);
             this.bBit5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt6
@@ -319,6 +307,7 @@
             this.Bitt6.TabIndex = 24;
             this.Bitt6.Text = "0";
             this.Bitt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt7
             // 
@@ -332,6 +321,7 @@
             this.Bitt7.TabIndex = 23;
             this.Bitt7.Text = "0";
             this.Bitt7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt8
             // 
@@ -345,6 +335,7 @@
             this.Bitt8.TabIndex = 22;
             this.Bitt8.Text = "0";
             this.Bitt8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt1
             // 
@@ -358,6 +349,7 @@
             this.Bitt1.TabIndex = 21;
             this.Bitt1.Text = "0";
             this.Bitt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt2
             // 
@@ -371,6 +363,7 @@
             this.Bitt2.TabIndex = 20;
             this.Bitt2.Text = "0";
             this.Bitt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt3
             // 
@@ -384,6 +377,7 @@
             this.Bitt3.TabIndex = 19;
             this.Bitt3.Text = "0";
             this.Bitt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt4
             // 
@@ -397,6 +391,7 @@
             this.Bitt4.TabIndex = 18;
             this.Bitt4.Text = "0";
             this.Bitt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // Bitt5
             // 
@@ -411,6 +406,7 @@
             this.Bitt5.TabIndex = 17;
             this.Bitt5.Text = "0";
             this.Bitt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bitt5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bit8_MouseDown);
             // 
             // label2
             // 
@@ -430,22 +426,66 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "label3";
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(102, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Location = new System.Drawing.Point(666, 222);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(63, 44);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Shift Right\r\n";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ClearA
+            // 
+            this.ClearA.Location = new System.Drawing.Point(102, 12);
+            this.ClearA.Name = "ClearA";
+            this.ClearA.Size = new System.Drawing.Size(75, 64);
+            this.ClearA.TabIndex = 29;
+            this.ClearA.Text = "ClearA";
+            this.ClearA.UseVisualStyleBackColor = true;
+            this.ClearA.Click += new System.EventHandler(this.ClearA_Click);
+            // 
+            // ClearB
+            // 
+            this.ClearB.Location = new System.Drawing.Point(102, 82);
+            this.ClearB.Name = "ClearB";
+            this.ClearB.Size = new System.Drawing.Size(75, 64);
+            this.ClearB.TabIndex = 30;
+            this.ClearB.Text = "ClearB";
+            this.ClearB.UseVisualStyleBackColor = true;
+            this.ClearB.Click += new System.EventHandler(this.ClearB_Click);
+            // 
+            // ClearC
+            // 
+            this.ClearC.Location = new System.Drawing.Point(102, 152);
+            this.ClearC.Name = "ClearC";
+            this.ClearC.Size = new System.Drawing.Size(75, 64);
+            this.ClearC.TabIndex = 31;
+            this.ClearC.Text = "ClearC";
+            this.ClearC.UseVisualStyleBackColor = true;
+            this.ClearC.Click += new System.EventHandler(this.ClearC_Click);
+            // 
+            // Reset
+            // 
+            this.Reset.Location = new System.Drawing.Point(102, 222);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(75, 64);
+            this.Reset.TabIndex = 32;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.ClearC);
+            this.Controls.Add(this.ClearB);
+            this.Controls.Add(this.ClearA);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Bitt6);
@@ -509,7 +549,11 @@
         private System.Windows.Forms.TextBox Bitt5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ClearA;
+        private System.Windows.Forms.Button ClearB;
+        private System.Windows.Forms.Button ClearC;
+        private System.Windows.Forms.Button Reset;
     }
 }
 
