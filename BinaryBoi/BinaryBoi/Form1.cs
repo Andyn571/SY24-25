@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,12 @@ namespace BinaryBoi
     public partial class Form1 : Form
     {
         int Total = 0;
+        int TotalA = 0;
+        int TotalB = 0;
+
         int[] bits = new int[8];
         int[] Bbits = new int[8];
         int[] bitts = new int[8];
-        int Total3 = 0;
         public Form1()
         {
             InitializeComponent();
@@ -25,15 +28,6 @@ namespace BinaryBoi
         {
 
             Total = 0;
-
-            if (bits[0] != 0) Total += 1;
-            if (bits[1] != 0) Total += 2;
-            if (bits[2] != 0) Total += 4;
-            if (bits[3] != 0) Total += 8;
-            if (bits[4] != 0) Total += 16;
-            if (bits[5] != 0) Total += 32;
-            if (bits[6] != 0) Total += 64;
-            if (bits[7] != 0) Total += 128;
 
             if (Bit1.Text == "1") bits[0] = 1;
             else bits[0] = 0;
@@ -59,21 +53,14 @@ namespace BinaryBoi
             if (Bit8.Text == "1") bits[7] = 1;
             else bits[7] = 0;
 
+            for (int i = 0; i < bits.Length; i++) { if (bits[i] != 0) Total += (int)Math.Pow(2, i); }
+
             label1.Text=Total.ToString();
         }
 
         private void calculateValue2()
         {
-            Total = 0;
-
-            if (Bbits[0] != 0) Total += 1;
-            if (Bbits[1] != 0) Total += 2;
-            if (Bbits[2] != 0) Total += 4;
-            if (Bbits[3] != 0) Total += 8;
-            if (Bbits[4] != 0) Total += 16;
-            if (Bbits[5] != 0) Total += 32;
-            if (Bbits[6] != 0) Total += 64;
-            if (Bbits[7] != 0) Total += 128;
+            TotalA = 0;
 
             if (bBit1.Text == "1") Bbits[0] = 1;
             else Bbits[0] = 0;
@@ -100,20 +87,15 @@ namespace BinaryBoi
             else Bbits[7] = 0;
             //bit8
 
-            label2.Text = Total.ToString();
+            for (int i = 0; i < Bbits.Length; i++) { if (Bbits[i] != 0) TotalA += (int)Math.Pow(2, i); }
+
+            label2.Text = TotalA.ToString();
         }
         private void calculateValue3()
         {
-            Total = 0;
+            TotalB = 0;
 
-            if (bitts[0] != 0) Total += 1;
-            if (bitts[1] != 0) Total += 2;
-            if (bitts[2] != 0) Total += 4;
-            if (bitts[3] != 0) Total += 8;
-            if (bitts[4] != 0) Total += 16;
-            if (bitts[5] != 0) Total += 32;
-            if (bitts[6] != 0) Total += 64;
-            if (bitts[7] != 0) Total += 128;
+           
 
             if (Bitt1.Text == "1") bitts[0] = 1;
             else bitts[0] = 0;
@@ -140,7 +122,9 @@ namespace BinaryBoi
             else bitts[7] = 0;
             //bit8
 
-            label3.Text = Total.ToString();
+            for (int i = 0; i < bitts.Length; i++) { if (bitts[i] != 0) TotalB += (int)Math.Pow(2, i); }
+
+            label3.Text = TotalB.ToString();
         }
         private void Bit8_MouseDown(object sender, MouseEventArgs e)
         {
@@ -189,14 +173,30 @@ namespace BinaryBoi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Bit2.Text == "1") { Bit1.Text = "1"; Bit2.Text = "0"; }
-            if (Bit3.Text == "1") { Bit2.Text = "1"; Bit3.Text = "0"; }
-            if (Bit4.Text == "1") { Bit3.Text = "1"; Bit4.Text = "0"; }
-            if (Bit5.Text == "1") { Bit4.Text = "1"; Bit5.Text = "0"; }
-            if (Bit6.Text == "1") { Bit5.Text = "1"; Bit6.Text = "0"; }
-            if (Bit7.Text == "1") { Bit6.Text = "1"; Bit7.Text = "0"; }
-            if (Bit8.Text == "1") { Bit7.Text = "1"; Bit8.Text = "0"; }
+            //shift right
+            for (int i = 0; i < bits.Length - 1; i++)
+            {
+                //if (bits[7] == 1) { bits[7] = 0; bits[7 - 1] = 1; }
+
+                bits[i] = bits[i + 1];
+            }
+            bits[7] = 0;
+            for (int i = 0; i < Bbits.Length - 1; i++)
+            {
+                //if (Bbits[7] == 1) { Bbits[7] = 0; Bbits[7 - 1] = 1; }
+
+                Bbits[i] = Bbits[i + 1];
+            }
+            Bbits[7] = 0;
+            for (int i = 0; i < bitts.Length - 1; i++)
+            {
+                //if (bitts[7] == 1) { bitts[7] = 0; bitts[7 - 1] = 1; }
+
+                bitts[i] = bitts[i + 1];
+            }
+            bitts[7] = 0;
             Update();
+
         }
 
         private void ClearA_Click(object sender, EventArgs e)
@@ -220,6 +220,69 @@ namespace BinaryBoi
             for (int i = 0; i < bits.Length; i++) { bits[i] = 0; Update(); }
             for (int i = 0; i < Bbits.Length; i++) { Bbits[i] = 0; Update(); }
             for (int i = 0; i < bitts.Length; i++) { bitts[i] = 0; Update(); }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //And
+            for (int i=0; i<bits.Length; i++)
+            {
+                if (bits[i]*Bbits[i]==1) bitts[i] = 1; 
+                if (bits[i] * Bbits[i]==0)bitts[i] = 0;
+                Update();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Xor
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //OR
+            for (int i=0; i<bits.Length; i++)
+            {
+                if (bits[i] + Bbits[i] == 1) bitts[i] = 1;
+                if (bits[i] + Bbits[i] == 2) bitts[i] = 1;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Subtract
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Add
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Shift Left
+            for (int i = bits.Length - 1; i > 0; i--)
+            {
+                //if (bits[7] == 1) { bits[7] = 0; bits[7 - 1] = 1; }
+
+                bits[i] = bits[i - 1];
+            }
+            bits[0] = 0;
+            for (int i = 0; i < Bbits.Length - 1; i++)
+            {
+                //if (Bbits[7] == 1) { Bbits[7] = 0; Bbits[7 - 1] = 1; }
+
+                Bbits[i] = Bbits[i + 1];
+            }
+            Bbits[7] = 0;
+            for (int i = 0; i < bitts.Length - 1; i++)
+            {
+                //if (bitts[7] == 1) { bitts[7] = 0; bitts[7 - 1] = 1; }
+
+                bitts[i] = bitts[i + 1];
+            }
+            bitts[7] = 0;
+            Update();
         }
     }
 }
