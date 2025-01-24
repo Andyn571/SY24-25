@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -227,8 +228,8 @@ namespace BinaryBoi
             //And
             for (int i=0; i<bits.Length; i++)
             {
-                if (bits[i]*Bbits[i]==1) bitts[i] = 1; 
-                if (bits[i] * Bbits[i]==0)bitts[i] = 0;
+                if (bits[i] * Bbits[i]==1) bitts[i] = 1; 
+                if (bits[i] * Bbits[i]==0) bitts[i] = 0;
                 Update();
             }
         }
@@ -236,15 +237,26 @@ namespace BinaryBoi
         private void button6_Click(object sender, EventArgs e)
         {
             //Xor
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bits[i] == 1 || Bbits[i] == 1) bitts[i] = 0;
+                if (bits[i] == 0 || Bbits[i] == 0) bitts[i] = 0;
+                if (bits[i] == 1 && Bbits[i] == 0) bitts[i] = 1;
+                if (bits[i] == 0 && Bbits[i] == 1) bitts[i] = 1;
+                Update();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             //OR
-            for (int i=0; i<bits.Length; i++)
+            for (int i = 0; i < bits.Length; i++)
             {
-                if (bits[i] + Bbits[i] == 1) bitts[i] = 1;
-                if (bits[i] + Bbits[i] == 2) bitts[i] = 1;
+                if (bits[i] == 0 || Bbits[i] == 1) bitts[i] = 1;
+                if (bits[i] == 1 || Bbits[i] == 0) bitts[i] = 1;
+                if (bits[i] == 0 || Bbits[i] == 0) bitts[i] = 0;
+                if (bits[i] == 1 || Bbits[i] == 1) bitts[i] = 1;
+                Update();
             }
         }
 
@@ -256,32 +268,32 @@ namespace BinaryBoi
         private void button3_Click(object sender, EventArgs e)
         {
             //Add
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bits[i] == 1 && Bbits[i] != 1) bitts[i] = 1;
+                if (bits[i] != 1 && Bbits[i] == 1) bitts[i] = 1;
+                if (bits[i] == 1 && Bbits[i] == 1) bitts[i + 1] = 1;
+                Update();
+            }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //Shift Left
             for (int i = bits.Length - 1; i > 0; i--)
             {
-                //if (bits[7] == 1) { bits[7] = 0; bits[7 - 1] = 1; }
-
                 bits[i] = bits[i - 1];
             }
             bits[0] = 0;
-            for (int i = 0; i < Bbits.Length - 1; i++)
+            for (int i = Bbits.Length - 1; i > 0; i--)
             {
-                //if (Bbits[7] == 1) { Bbits[7] = 0; Bbits[7 - 1] = 1; }
-
-                Bbits[i] = Bbits[i + 1];
+                Bbits[i] = Bbits[i - 1];
             }
-            Bbits[7] = 0;
-            for (int i = 0; i < bitts.Length - 1; i++)
+            Bbits[0] = 0;
+            for (int i = bitts.Length - 1; i > 0; i--)
             {
-                //if (bitts[7] == 1) { bitts[7] = 0; bitts[7 - 1] = 1; }
-
-                bitts[i] = bitts[i + 1];
+                bitts[i] = bitts[i - 1];
             }
-            bitts[7] = 0;
+            bitts[0] = 0;
             Update();
         }
     }
