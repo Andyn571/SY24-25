@@ -273,6 +273,7 @@ namespace BinaryBoi
                 if (bits[i] == 1 && Bbits[i] != 1) bitts[i] = 1;
                 if (bits[i] != 1 && Bbits[i] == 1) bitts[i] = 1;
                 if (bits[i] == 1 && Bbits[i] == 1) bitts[i + 1] = 1;
+                if (bits[i] == 1 && bitts[i] == 1) bitts[i + 1] = 1; bitts[i] = 0;
                 Update();
             }
         }
