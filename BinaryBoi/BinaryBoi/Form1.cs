@@ -267,15 +267,43 @@ namespace BinaryBoi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Add
+            int carry = 0;
             for (int i = 0; i < bits.Length; i++)
             {
-                if (bits[i] == 1 && Bbits[i] != 1) bitts[i] = 1;
-                if (bits[i] != 1 && Bbits[i] == 1) bitts[i] = 1;
-                if (bits[i] == 1 && Bbits[i] == 1) bitts[i + 1] = 1;
-                if (bits[i] == 1 && bitts[i] == 1) bitts[i + 1] = 1; bitts[i] = 0;
-                Update();
+                // Calculate the sum of the current bits and the carry
+                int sum = bits[i] + Bbits[i] + carry;
+
+                // Determine the resulting bit and the new carry
+                if (sum == 0)
+                {
+                    bitts[i] = 0;
+                    carry = 0;
+                }
+                else if (sum == 1)
+                {
+                    bitts[i] = 1;
+                    carry = 0;
+                }
+                else if (sum == 2)
+                {
+                    bitts[i] = 0;
+                    carry = 1;
+                }
+                else // sum == 3
+                {
+                    bitts[i] = 1;
+                    carry = 1;
+                }
             }
+
+            // If there's a carry left after the last addition, handle it
+            if (carry == 1)
+            {
+                // Assuming bitts has enough space to accommodate an extra bit
+                bitts[bits.Length] = 1; // This will be the carry bit
+            }
+
+            Update();
         }
         private void button1_Click(object sender, EventArgs e)
         {
